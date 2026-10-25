@@ -12,7 +12,7 @@ int main()
         std::cin >> arr[i];
     }
     
-    for(int i {0};i<n;i++)
+    for(int i {0};i<n-1;i++)  // no need to itterate the outer loop to n.
     {
         for(int j {i+1};j<n;j++)
         {
