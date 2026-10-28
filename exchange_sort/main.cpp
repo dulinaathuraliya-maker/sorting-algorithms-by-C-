@@ -4,7 +4,10 @@ struct Array
     int size {0};
     int *array = new int[size];
 };
-
+void deletePointers(Array arr)
+{
+    delete[] arr.array;
+}
 Array getTheValues()
 {
     int n {};
@@ -56,4 +59,5 @@ int main()
     Array arr = getTheValues();
     exchangeSort(arr);
     printResult(arr.array,arr.size);
+    deletePointers(arr);
 }
