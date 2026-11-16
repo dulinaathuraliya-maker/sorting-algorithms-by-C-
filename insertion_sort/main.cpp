@@ -27,15 +27,12 @@ int main()
     {
         int value = arr.ptr[i];
         int index = i;
-
-        for(int j {i-1};j>=0;j--)   // j is starting frome the previous one of i index
+        int j = i-1;
+        while(j>=0 and arr.ptr[j]>value)
         {
-            if(arr.ptr[j]>value)
-            {
-                int temp = arr.ptr[j];
-                arr.ptr[j] = value;
-                arr.ptr[j+1] = temp;
-            }
+            int temp = arr.ptr[j];
+            arr.ptr[j] = value;
+            arr.ptr[j+1] = temp;
         }
     }
 
